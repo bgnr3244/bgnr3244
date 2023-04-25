@@ -1,5 +1,1 @@
-- Hi, I’m @bgnr3244
-- I’m interested in learning to code.
-- I’m currently learning how to code.
-- I’m looking to collaborate on nothing.
-- How to reach me: don't.
+:)
