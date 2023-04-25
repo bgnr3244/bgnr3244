@@ -1,0 +1,78 @@
+*{
+
+	margin: 0;                                     /* margem */
+	padding: 0;                                   /* preenchimento */
+	font-family: Arial, Helvetica, sans-serif;    /* família de fontes */
+	color: #0c298f;
+}
+
+html{
+
+	font-size: 62.5%;                          /* tamanho da fonte */
+
+}
+
+.form_login{
+
+	width:  700px;      /* largura */
+	margin: 7rem auto;   /* margem */
+}
+
+h1{   /* texto maior */
+
+	font-size: 4rem;                 /* tamanho da fonte */
+	margin-bottom: 2.5rem;          /* margem inferior*/
+	color: green;                /* cor */
+
+
+}
+.agrupamento_login{
+
+	display: flex;                            /* exibição flexível */
+	flex-direction: row;                     /* direção flexível */
+	justify-content: space-between;         /* justificar conteúdo */
+	align-items: center;                   /* itens de alinhamento */
+	border: 1px solid #0c298f;            /* borda */
+	padding: 5rem;                       /* preenchimento*/
+	border-radius: 8px;                 /* raio da borda */
+
+
+}
+label,                       /* rótulo */
+input[type="text"],			/* entrada */
+input[type="password"],
+input[type="submit"]{
+
+
+	font-size: 1.6rem;   /* tamanho da fonte */
+}
+
+input[type="text"],
+input[type="password"]{
+
+	width: 300px;                  /* largura*/
+	padding: 1rem;                 /* preenchimento*/
+	margin-top: 1.2rem;            /* margem superior*/
+	margin-bottom: 1.2rem;          /* margem inferior*/
+	border: 1px solid #00ffe8;     /* borda */
+	border-radius: 8px;            /* raio da borda */
+
+}
+input[type="submit"]{      	/* entrada */
+
+	width: 325px;    /* largura*/
+	padding: 1.2rem;   /* preenchimento*/
+	margin-top: 1.2rem; /* margem superior*/
+	margin-bottom: 1.2rem; /* margem inferior*/
+	border: 1px solid #944b6e; /* borda */
+	border-radius: 8px;   /* raio da borda */
+	background: #ff675a;   /* plano de fundo */
+	color: #FFF;     /* cor */
+	cursor: pointer;   /* cursor */
+
+}
+.logo_login{    /* configurações da imagem logo*/
+
+	width: 200px;   /* largura*/
+
+}
