@@ -1,0 +1,67 @@
+<?
+
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$db_name = "db_portal";
+
+$servidor = "localhost";
+
+
+$conexao = mysqli_connect($servidor, $usuario, $senha, $db_name) or die('Banco de dados indisponível');
+$host_ip = $_SERVER['HTTP_HOST'];
+$url = "http://".$host_ip."/portal";
+$url_admin = "http://".$host_ip."/portal/admin";
+$url_aluno = "http://".$host_ip."/portal/aluno";
+?>
+
+
+
+/*VALIDA_LOGIN
+
+
+
+
+<?php session_start();
+
+	require('conexao.php');
+
+	if (isset($_POST['nome_login'])) {
+
+		$nome_login = $_POST['nome_login'];
+		$senha_login = md5($_POST['senha_login']);
+
+		$sql_valida_login = mysqli_query($conexao, "SELECT * FROM login WHERE nome_login = '".$nome_login."' AND senha_login = '".$senha_login."'");
+
+		if (mysqli_num_rows($sql_valida_login) > 0) {
+
+			$registros_login = mysqli_fetch_assoc($sql_valida_login);
+
+			$_SESSION['nome_completo_login'] = $registros_login['nome_completo_login'];
+			$_SESSION['nome_login'] = $registros_login['nome_login'];
+			$_SESSION['tipo_login'] = $registros_login['tipo_login'];
+
+			$_SESSION['url'] = $url;
+			$_SESSION['url_admin'] = $url_admin;
+			$_SESSION['url_aluno'] = $url_aluno;
+
+				if ($_SESSION['tipo_login'] == 0) {
+
+					echo "<script> window.location.href='$url_admin';</script>";
+
+
+				}else{
+
+					echo "<script> window.location.href='$url_aluno';</script>";
+
+				}
+		}else{
+
+
+			echo "<script> alert('Erro ao fazer login. Tente novamente ou fale com o Adminstrador.');</script>";
+			echo "<script> window.location.href='$url';</script>";
+
+
+		}
+	}
+	?>
